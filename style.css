@@ -1,7 +1,7 @@
 /* ===== BODY ===== */
 body {
-  background-color: #0d6efd; /* اللون الأزرق الأساسي للصفحة كلها */
-  color: white; /* النصوص كلها باللون الأبيض */
+  background-color: #ffffff; /* خلفية بيضاء عامة */
+  color: #333; /* نصوص داكنة للوضوح */
   line-height: 1.6;
 }
 
@@ -12,56 +12,32 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #0d6efd; /* خلفية زرقاء موحدة */
+  background: #0d6efd; /* الخلفية الزرقاء للصفحة الأولى فقط */
+  color: white; /* النصوص بيضاء على Hero */
   position: relative;
   padding: 40px 20px;
 }
 
-.hero-content h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
-}
-
-.hero-content p {
-  font-size: 24px;
-  margin-bottom: 25px;
-}
-
+.hero-content h1,
+.hero-content p,
 .hero-content h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
-  direction: rtl;
-}
-
-.hero-content a.whatsapp-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 40px;
-  font-size: 18px;
-  text-decoration: none;
-  border-radius: 30px;
-  background: #25d366;
-  color: white;
-  transition: 0.3s;
-}
-
-.hero-content a.whatsapp-btn:hover {
-  background: #1ebe5d;
+  color: white; /* النصوص داخل Hero باللون الأبيض */
 }
 
 /* ===== SECTION ===== */
 .section {
   padding: 80px 20px;
   text-align: center;
-  color: white; /* النصوص بيضاء على الخلفية الزرقاء */
+  color: #333; /* النصوص باللون الداكن على الأبيض */
 }
 
 .section.about {
-  background: rgba(255, 255, 255, 0.1); /* شوية ظل فاتح للفصل */
+  background: #ffffff; /* خلفية بيضاء للـ Services و Contact */
   padding: 60px 20px;
   border-radius: 15px;
   max-width: 900px;
   margin: 40px auto;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
 /* ===== NAVBAR ===== */
@@ -151,3 +127,4 @@ footer .social a:hover {
     padding: 12px 30px;
   }
 }
+
