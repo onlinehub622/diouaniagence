@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - AGENCE DIOUANI VOYAGEUR</title>
+  <title>Contact - Diouani Agence</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Navbar -->
 <nav>
   <div class="logo">
-    <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png">
+    <img src="https://i.postimg.cc/fbk8XSGW/sawan.jpg" alt="Logo Diouani Agence">
     <span>AGENCE DIOUANI VOYAGEUR</span>
   </div>
   <div class="menu">
@@ -20,51 +21,35 @@
   </div>
 </nav>
 
+<!-- Hero -->
 <section class="contact-hero">
   <h1>Contactez-nous</h1>
-  <p>نحن هنا للإجابة على جميع استفساراتكم</p>
+  <p>Remplissez le formulaire ci-dessous pour nous envoyer un message.</p>
 </section>
 
-<section class="contact-section">
-
-  <div class="contact-container">
-
-    <!-- FORM -->
-    <div class="contact-form fade-up">
-      <h2>Envoyez-nous un message</h2>
-
-     <form action="https://formspree.io/f/xbdlpqwq" method="POST">
-    <input type="text" name="name" placeholder="Nom complet" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
-</form>
-
-    <!-- INFO -->
-    <div class="contact-info fade-up">
-      <h2>Contact direct</h2>
-
-      <a href="tel:+212622569761" class="info-box">
-        📞 <span>+212 622 56 97 61</span>
-      </a>
-
-      <a href="https://wa.me/212622569761" class="info-box whatsapp">
-        💬 <span>WhatsApp</span>
-      </a>
-
-      <div class="info-box">
-        📍 <span>Agence Diouani Voyageur – Maroc</span>
-      </div>
-    </div>
-
+<!-- Formulaire central -->
+<section id="contact-form">
+  <div class="form-container">
+    <h2>Envoyez-nous un message</h2>
+    <form action="https://formspree.io/f/xbdlpqwq" method="POST">
+      <input type="text" name="nom" placeholder="Nom" required>
+      <input type="text" name="prenom" placeholder="Prénom" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="telephone" placeholder="Téléphone" required>
+      <textarea name="message" placeholder="Votre message..." required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
   </div>
-
 </section>
 
+<!-- Footer -->
 <footer>
   <p>© 2026 - AGENCE DIOUANI VOYAGEUR</p>
+  <p>📞 06 XX XX XX XX | ✉️ contact@diouaniagence.com</p>
+  <div class="social">
+    <a href="#">Facebook</a> | <a href="#">Instagram</a>
+  </div>
 </footer>
 
 </body>
 </html>
-
