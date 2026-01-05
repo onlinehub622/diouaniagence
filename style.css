@@ -17,8 +17,8 @@
 
 /* ===== BODY ===== */
 body {
-  background-color: var(--white); /* خلفية بيضاء عامة */
-  color: var(--text-dark); /* نصوص داكنة للوضوح */
+  background-color: var(--white);
+  color: var(--text-dark);
   line-height: 1.6;
 }
 
@@ -106,8 +106,8 @@ nav {
 .section,
 .about,
 .contact-section {
-  background-color: var(--white) !important; /* خلفية بيضاء */
-  color: var(--text-dark) !important; /* نصوص داكنة */
+  background-color: var(--white) !important;
+  color: var(--text-dark) !important;
   padding: 80px 20px;
   border-radius: 15px;
   max-width: 900px;
@@ -163,14 +163,15 @@ nav {
   transition: 0.3s;
 }
 
+/* ===== تعديل حجم الـ textarea باش يكون مثل input ===== */
+.simple-form textarea {
+  height: 45px;   /* نفس ارتفاع الـ input */
+  resize: none;
+}
+
 .simple-form input:focus,
 .simple-form textarea:focus {
   border-color: var(--primary);
-}
-
-.simple-form textarea {
-  height: 120px;
-  resize: none;
 }
 
 .simple-form button {
