@@ -328,7 +328,45 @@ footer {
 
 .contact-form button:hover {
   background: #084298;
+/* ===== SIMPLE CENTER FORM ===== */
+.simple-form {
+  max-width: 420px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
+
+.simple-form input,
+.simple-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.simple-form textarea {
+  height: 110px;
+  resize: none;
+}
+
+.simple-form button {
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.simple-form button:hover {
+  background: #084298;
+}
+
+
 
 
 
