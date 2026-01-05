@@ -1,71 +1,140 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* ===== COLORS ===== */
+:root {
+  --primary: #0d6efd;
+  --dark: #0b1c2d;
+  --light: #f4f6f8;
+  --white: #ffffff;
+}
+
+/* ===== BODY ===== */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #333;
+  background-color: var(--light);
+  color: #333;
+  line-height: 1.6;
 }
 
-header {
-    background: linear-gradient(to right, #003366, #0059b3);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
+/* ===== NAVBAR ===== */
 nav {
-    background-color: white;
-    text-align: center;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: var(--dark);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  color: var(--white);
+  font-size: 22px;
 }
 
 nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #003366;
-    font-weight: bold;
+  color: var(--white);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 nav a:hover {
-    color: #c9a227;
+  color: var(--primary);
 }
 
-section {
-    background-color: white;
-    margin: 40px auto;
-    padding: 30px;
-    width: 80%;
-    border-radius: 8px;
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+  url("https://images.unsplash.com/photo-1526772662000-3f88f10405ff");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
 }
 
-.services li {
-    padding: 10px;
-    font-size: 18px;
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
 }
 
-form input, form textarea {
-    width: 100%;
-    margin: 10px 0;
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.hero p {
+  font-size: 18px;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 60px 40px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--dark);
+}
+
+/* ===== SERVICES ===== */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+/* ===== CONTACT FORM ===== */
+form {
+  max-width: 500px;
+  margin: auto;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 button {
-    background-color: #003366;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    cursor: pointer;
+  width: 100%;
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #c9a227;
+  background: #084298;
 }
 
+/* ===== FOOTER ===== */
 footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 15px;
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
 }
