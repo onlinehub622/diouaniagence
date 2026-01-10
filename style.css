@@ -8,12 +8,11 @@
 
 /* ===== COLORS ===== */
 :root {
-  --primary: #0d6efd;        /* اللون الأزرق الرئيسي */
-  --secondary: #00b4d8;      /* اللون الثانوي */
-  --dark: #0b1c2d;           /* للـ navbar وfooter */
+  --primary: #0d6efd; /* اللون الأزرق الرئيسي */
+  --secondary: #00b4d8; /* اللون الثانوي */
+  --dark: #0b1c2d; /* للـ navbar وfooter */
   --white: #ffffff;
-  --text-dark: #333;         /* للنصوص على الأبيض */
-  --green: #25d366;          /* Whatsapp button */
+  --text-dark: #333; /* للنصوص على الأبيض */
 }
 
 /* ===== BODY ===== */
@@ -66,48 +65,47 @@ nav {
 
 /* ===== HERO ===== */
 .hero {
-  min-height: 70vh; /* حجم مناسب لجميع الصفحات */
+  min-height: 80vh;
+  background:
+    linear-gradient(rgba(11, 28, 45, 0.75), rgba(11, 28, 45, 0.75)),
+    url("https://images.unsplash.com/photo-1526772662000-3f88f10405ff");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: var(--white);
   padding: 40px 20px;
-  position: relative;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
-.hero h1,
-.hero p,
-.hero h2 {
+.hero-content h1,
+.hero-content p,
+.hero-content h2 {
   color: var(--white);
 }
 
-.hero h1 {
+.hero-content h1 {
   font-size: 48px;
   margin-bottom: 15px;
 }
 
-.hero p {
+.hero-content p {
   font-size: 24px;
   margin-bottom: 15px;
 }
 
-.hero h2 {
+.hero-content h2 {
   font-size: 36px;
   margin-bottom: 20px;
   direction: rtl;
 }
 
-/* ===== SECTIONS (Services, About, Contact...) ===== */
+/* ===== SECTION (Services, About, Contact) ===== */
 .section,
 .about,
-.contact-section,
-.destination-content {
+.contact-section {
   background-color: var(--white) !important;
   color: var(--text-dark) !important;
   padding: 80px 20px;
@@ -120,28 +118,28 @@ nav {
 
 .section h2,
 .about h2,
-.contact-section h2,
-.destination-content h2 {
+.contact-section h2 {
   font-size: 32px;
   margin-bottom: 30px;
 }
 
-/* ===== IMAGES / GALLERY ===== */
-.destination-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 30px;
+/* ===== CONTACT HERO ===== */
+.contact-hero {
+  background: linear-gradient(rgba(11,28,45,0.8), rgba(11,28,45,0.8)),
+  url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  text-align: center;
+  padding: 90px 20px;
 }
 
-.destination-images img {
-  width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+.contact-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
-/* ===== CONTACT FORM ===== */
+/* ===== CENTER FORM ===== */
 .simple-form {
   max-width: 420px;
   margin: auto;
@@ -165,8 +163,9 @@ nav {
   transition: 0.3s;
 }
 
+/* ===== تعديل حجم الـ textarea باش يكون مثل input ===== */
 .simple-form textarea {
-  height: 45px;
+  height: 45px;   /* نفس ارتفاع الـ input */
   resize: none;
 }
 
@@ -196,7 +195,7 @@ nav {
   display: inline-block;
   margin-top: 25px;
   padding: 14px 35px;
-  background: var(--green);
+  background: #25d366;
   color: var(--white);
   border-radius: 30px;
   text-decoration: none;
@@ -237,24 +236,284 @@ footer .social a:hover {
     padding: 15px 20px;
   }
 
-  .hero h1 {
+  .hero-content h1 {
     font-size: 32px;
   }
 
-  .hero p {
+  .hero-content p {
     font-size: 18px;
   }
 
-  .hero h2 {
+  .hero-content h2 {
     font-size: 28px;
   }
 
-  .hero .whatsapp-btn {
+  .hero-content a.whatsapp-btn {
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+}/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* ===== COLORS ===== */
+:root {
+  --primary: #0d6efd; /* اللون الأزرق الرئيسي */
+  --secondary: #00b4d8; /* اللون الثانوي */
+  --dark: #0b1c2d; /* للـ navbar وfooter */
+  --white: #ffffff;
+  --text-dark: #333; /* للنصوص على الأبيض */
+}
+
+/* ===== BODY ===== */
+body {
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background: var(--dark);
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+}
+
+.menu a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  color: var(--secondary);
+  background: rgba(255,255,255,0.1);
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 80vh;
+  background:
+    linear-gradient(rgba(11, 28, 45, 0.75), rgba(11, 28, 45, 0.75)),
+    url("https://images.unsplash.com/photo-1526772662000-3f88f10405ff");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  padding: 40px 20px;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content h2 {
+  color: var(--white);
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.hero-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  direction: rtl;
+}
+
+/* ===== SECTION (Services, About, Contact) ===== */
+.section,
+.about,
+.contact-section {
+  background-color: var(--white) !important;
+  color: var(--text-dark) !important;
+  padding: 80px 20px;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.section h2,
+.about h2,
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* ===== CONTACT HERO ===== */
+.contact-hero {
+  background: linear-gradient(rgba(11,28,45,0.8), rgba(11,28,45,0.8)),
+  url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.contact-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+/* ===== CENTER FORM ===== */
+.simple-form {
+  max-width: 420px;
+  margin: auto;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.simple-form input,
+.simple-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* ===== تعديل حجم الـ textarea باش يكون مثل input ===== */
+.simple-form textarea {
+  height: 45px;   /* نفس ارتفاع الـ input */
+  resize: none;
+}
+
+.simple-form input:focus,
+.simple-form textarea:focus {
+  border-color: var(--primary);
+}
+
+.simple-form button {
+  padding: 14px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.simple-form button:hover {
+  background: #084298;
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 35px;
+  background: #25d366;
+  color: var(--white);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+footer .social a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+footer .social a:hover {
+  color: var(--secondary);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .hero-content a.whatsapp-btn {
     font-size: 16px;
     padding: 12px 30px;
   }
 
-  .destination-images img {
-    width: 90%;
-  }
-}
+
+
+
+                                                                                                                                                                           
+
+
+
+
+
+
