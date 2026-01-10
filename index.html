@@ -3,80 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diouani Agence - خدمات سياحية احترافية في المغرب</title>
-  <meta name="description" content="Diouani Agence تقدم خدمات سياحية، حجوزات رحلات، وتنظيم رحلات Umrah في المغرب.">
-  <meta name="google-site-verification" content="C53FFRZyd6UbWMtEZV2PSot-NMgvOy_j8fCfuDc6jAA" />
-  <link rel="canonical" href="https://onlinehub622.github.io/diouaniagence/" />
+  <title>Agence Diouani - Voyage Professionnel</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== BASIC RESET ===== */
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+    body {background-color:#f8f9fa; color:#333;}
+
+    /* ===== NAVBAR ===== */
+    nav {background-color:#0b1c2d; display:flex; justify-content:space-between; align-items:center; padding:15px 50px;}
+    .logo {display:flex; align-items:center; gap:10px; color:white; font-weight:bold; font-size:22px;}
+    .logo img {width:50px; height:50px;}
+    .menu a {color:white; text-decoration:none; margin-left:20px; padding:5px 10px; border-radius:6px; transition:0.3s;}
+    .menu a:hover {background: rgba(255,255,255,0.1); color:#00b4d8;}
+
+    /* ===== HERO ===== */
+    .hero {min-height:80vh; background: linear-gradient(rgba(11,28,45,0.6), rgba(11,28,45,0.6)), url('https://i.postimg.cc/dVZn5syn/istanbul-4307665-640.jpg'); background-size:cover; background-position:center; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:white; padding:50px 20px;}
+    .hero h1 {font-size:48px; margin-bottom:15px; text-shadow:2px 2px 6px rgba(0,0,0,0.6);}
+    .hero p {font-size:22px; margin-bottom:15px; text-shadow:1px 1px 4px rgba(0,0,0,0.6);}
+    .hero .btn {background:#25d366; color:white; padding:15px 35px; text-decoration:none; border-radius:30px; font-weight:bold; transition:0.3s;}
+    .hero .btn:hover {background:#1ebe5d;}
+
+    /* ===== DESTINATIONS GRID ===== */
+    .destinations {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; max-width:1200px; margin:40px auto; padding:0 20px;}
+    .destinations img {width:100%; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.1); transition:0.3s;}
+    .destinations img:hover {transform:scale(1.05);}
+
+    /* ===== FOOTER ===== */
+    footer {background:#0b1c2d; color:white; text-align:center; padding:30px 20px;}
+    footer a {color:white; margin:0 10px; text-decoration:none; transition:0.3s;}
+    footer a:hover {color:#00b4d8;}
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:768px){nav{flex-direction:column; gap:15px;} .hero h1{font-size:36px;} .hero p{font-size:18px;}}
+  </style>
 </head>
 <body>
 
-<!-- Removed the old header, now header content is integrated in hero -->
-
 <nav>
   <div class="logo">
-    <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt="logo avion">
-    <span>AGENCE DIOUANI VOYAGEUR</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt="logo">
+    Diouani Agence
   </div>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/695ee36a1c0988197d99376b/1jedagmfg';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
   <div class="menu">
-    <a href="index.html">Accueil</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-    <a href="turquie.html">Turquie</a>
+    <a href="#">Accueil</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    <a href="#">Destinations</a>
   </div>
 </nav>
 
 <section class="hero">
-  <div class="hero-content">
-    <h1>AGENCE DIOUANI VOYAGEUR</h1>
-    <p>Votre porte vers le monde ✈️</p>
-    <h2>✈️ سافر معنا بثقة واحتراف</h2>
-    <p>AGENCE DIOUANI VOYAGEUR — وجهتك الأولى للسفر</p>
-    <a href="contact.html" class="whatsapp-btn">احجز الآن</a>
-  </div>
+  <h1>AGENCE DIOUANI VOYAGEUR</h1>
+  <p>Voyagez avec confiance et professionnalisme ✈️</p>
+  <a href="contact.html" class="btn">Réservez Maintenant</a>
 </section>
 
-<section class="section about">
-  <h2>Bienvenue chez AGENCE DIOUANI VOYAGEUR</h2>
-  <p>
-    نحن وكالة متخصصة في السفر، حجز تذاكر الطيران،
-    ومرافقة عملائنا في رحلاتهم. نسعى لتقديم أفضل تجربة سفر بثقة وراحة.
-  </p>
+<section class="destinations">
+  <img src="https://i.postimg.cc/LXJs1b7K/istanbul-2912249-1280.jpg" alt="Istanbul">
+  <img src="https://i.postimg.cc/6qSnZZzP/turkey-4737730-1280.jpg" alt="Cappadocia">
+  <img src="https://i.postimg.cc/xT2bw9hG/blacksea-5359212-1280.jpg" alt="Black Sea">
+  <img src="https://i.postimg.cc/s2RC30PC/istanbul-9939688-1920.jpg" alt="Mosquée d'Istanbul">
 </section>
 
 <footer>
-  <p>© 2026 - AGENCE DIOUANI VOYAGEUR</p>
-  <p>📞 06 22 56 97 61 | ✉️ abdellahdiouani@gmail.com</p>
-  <div class="social">
+  <p>© 2026 Diouani Agence</p>
+  <p>📞 06 22 56 97 61 | ✉️ contact@diouaniagence.com</p>
+  <div>
     <a href="#">Facebook</a> | <a href="#">Instagram</a>
   </div>
 </footer>
 
 </body>
-</html>                                                                                                                                                                                       
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
