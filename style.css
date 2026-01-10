@@ -507,23 +507,11 @@ footer .social a:hover {
     padding: 12px 30px;
   }
 
- .service-video {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-}
 
-.service-video video {
-  width: 180px !important;   /* حجم صغير ومناسب */
-  height: auto;        /* مهم باش يبان كامل */
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
 
 
                                                                                                                                                                            
+
 
 
 
