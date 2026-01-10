@@ -514,13 +514,14 @@ footer .social a:hover {
 }
 
 .service-video video {
-  width: 280px;     /* حجم صغير */
+  width: 100px;     /* حجم صغير */
   max-width: 90%;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
                                                                                                                                                                            
+
 
 
 
