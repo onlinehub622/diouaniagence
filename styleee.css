@@ -24,7 +24,7 @@ body {
     line-height: 1.6;
 }
 
-/* ===== NAVBAR (شفافة / sticky) ===== */
+/* ===== NAVBAR ===== */
 .navbar {
     position: absolute;
     top: 0;
@@ -36,11 +36,6 @@ body {
     align-items: center;
     padding: 20px 50px;
     z-index: 10;
-    .navbar nav {
-    display: flex;
-    justify-content: flex-end; /* 👈 يخلي المينيو فاليمين */
-    align-items: center;
-
 }
 
 .navbar .logo {
@@ -49,14 +44,19 @@ body {
     color: var(--white);
 }
 
+.navbar nav {
+    display: flex;
+    justify-content: flex-end; /* يخلي menu فاليمين */
+    align-items: center;
+}
+
 .navbar nav a {
-    color: var(--primary); /* 👈 زرّق */
+    color: var(--primary); /* أزرق */
     text-decoration: none;
     margin-left: 25px;
     font-weight: 600;
     transition: 0.3s;
 }
-
 
 .navbar nav a:hover {
     color: var(--secondary);
@@ -302,6 +302,3 @@ body {
     .hero-content p  { font-size: 16px; }
     .hero-content .arabic { font-size: 20px; }
 }
-
-
-
