@@ -155,14 +155,7 @@ body {
     background-color: var(--primary);
 }
 
-/* ===== FOOTER ===== */
-footer {
-    background-color: #1f4f91;
-    color: var(--white);
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 60px;
-}
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
@@ -241,5 +234,6 @@ footer {
     font-size: 14px;
 }
 }
+
 
 
