@@ -50,12 +50,13 @@ body {
 }
 
 .navbar nav a {
-    color: var(--white);
+    color: var(--primary); /* 👈 زرّق */
     text-decoration: none;
     margin-left: 25px;
-    font-weight: 500;
+    font-weight: 600;
     transition: 0.3s;
 }
+
 
 .navbar nav a:hover {
     color: var(--secondary);
@@ -301,5 +302,6 @@ body {
     .hero-content p  { font-size: 16px; }
     .hero-content .arabic { font-size: 20px; }
 }
+
 
 
