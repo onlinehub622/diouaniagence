@@ -6,30 +6,31 @@
     font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-/* ===== COLORS ===== */
+/* ===== COLORS (CSS VARIABLES) ===== */
 :root {
-  --primary: #0d6efd;      /* اللون الأزرق الرئيسي */
-  --secondary: #00b4d8;    /* اللون الثانوي */
-  --dark: #0b1c2d;          /* navbar & footer */
-  --white: #ffffff;
-  --text-dark: #333;        /* للنصوص على الأبيض */
-}
+    --primary: #0d6efd;        /* اللون الرئيسي */
+    --secondary: #00b4d8;      /* اللون الثانوي */
+    --dark: #0b1c2d;            /* navbar & footer */
+    --white: #ffffff;
+    --text-dark: #333;          /* النصوص على الأبيض */
+    --button: #0d6efd;          /* زر أساسي */
+    --button-hover: #084298;    /* زر hover */
 }
 
 /* ===== BODY ===== */
 body {
-    background-color: var(--primary);
+    background-color: var(--white);
     color: var(--text-dark);
     line-height: 1.6;
 }
 
-/* ===== NAVBAR (شفافة) ===== */
+/* ===== NAVBAR (شفافة / sticky) ===== */
 .navbar {
-    position: absolute;          /* مهم */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    background: transparent;     /* نحيد الخلفية */
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +53,7 @@ body {
 }
 
 .navbar nav a:hover {
-    color: #00ffcc;
+    color: var(--secondary);
 }
 
 /* ===== HERO ===== */
@@ -60,14 +61,13 @@ body {
     min-height: 100vh;
     background: 
       linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-      url('https://i.postimg.cc/6qzDK1yY/Whats-App-Image-2026-01-10-at-21-02-02.jpg')
-      center/cover no-repeat;
+      url('https://i.postimg.cc/6qzDK1yY/Whats-App-Image-2026-01-10-at-21-02-02.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: var(--white);
-    padding: 120px 20px 40px; /* خليت بلاصة للـ navbar */
+    padding: 120px 20px 40px; 
 }
 
 .hero-content {
@@ -90,11 +90,12 @@ body {
     margin-bottom: 25px;
 }
 
+/* ===== BUTTONS ===== */
 .btn-main {
     display: inline-block;
     padding: 14px 35px;
     background-color: var(--button);
-    color: white;
+    color: var(--white);
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
@@ -145,7 +146,7 @@ body {
 .card .btn {
     padding: 10px 22px;
     background-color: var(--secondary);
-    color: white;
+    color: var(--white);
     border-radius: 25px;
     text-decoration: none;
     transition: 0.3s;
@@ -155,7 +156,111 @@ body {
     background-color: var(--primary);
 }
 
+/* ===== FORM ===== */
+.simple-form {
+    max-width: 420px;
+    margin: auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
 
+.simple-form input,
+.simple-form textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.simple-form textarea {
+    height: 80px;
+    resize: none;
+}
+
+.simple-form input:focus,
+.simple-form textarea:focus {
+    border-color: var(--primary);
+}
+
+.simple-form button {
+    padding: 14px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.simple-form button:hover {
+    background: var(--button-hover);
+}
+
+/* ===== FOOTER PRO ===== */
+.footer-pro {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 60px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-col h2,
+.footer-col h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-col ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--primary);
+}
+
+/* Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 14px;
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
@@ -178,72 +283,16 @@ body {
         flex-direction: column;
         align-items: center;
     }
-/* ===== FOOTER PRO ===== */
-.footer-pro {
-    background-color: #0e2439;
-    color: #ffffff;
-    padding-top: 60px;
+
+    .footer-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+        padding: 0 10px;
+    }
 }
 
-.footer-container {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 أعمدة ثابتة */
-    gap: 40px;
-    padding: 0 40px;
+@media (max-width: 480px) {
+    .hero-content h1 { font-size: 28px; }
+    .hero-content p  { font-size: 16px; }
+    .hero-content .arabic { font-size: 20px; }
 }
-
-.footer-col h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: #4da6ff;
-}
-
-.footer-col h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #4da6ff;
-}
-
-.footer-col p {
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.footer-col ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer-col ul li a:hover {
-    color: #4da6ff;
-}
-
-/* Bottom */
-.footer-bottom {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    background-color: #091a2a;
-    font-size: 14px;
-}
-
-
-
-
-
-
-
-
