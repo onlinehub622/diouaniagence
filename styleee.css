@@ -15,8 +15,8 @@
 
     /* ===== COLORS ===== */
     :root {
-      --primary: #ffffff; /* لون الروابط أبيض */
-      --secondary: #00b4d8;
+      --primary: #0d3b99; /* أزرق غامق للروابط */
+      --secondary: #0d6efd; /* أزرق فاتح للhover */
       --dark: #0b1c2d;
       --white: #ffffff;
       --text-dark: #333;
@@ -59,7 +59,7 @@
     }
 
     .navbar nav a {
-      color: var(--primary); /* أبيض */
+      color: var(--primary); /* أزرق غامق */
       text-decoration: none;
       padding: 12px 25px;
       font-size: 20px; /* أكبر شوية */
@@ -69,7 +69,7 @@
     }
 
     .navbar nav a:hover {
-      background-color: rgba(255,255,255,0.2); /* خلفية فاتحة عند hover */
+      background-color: var(--secondary); /* أزرق فاتح عند hover */
       color: var(--white);
       transform: scale(1.05);
     }
