@@ -44,43 +44,58 @@
       text-decoration: underline;
     }
 
+    /* ===== HERO ===== */
     .hero-destination {
-  text-align: center;
-  height: 500px;              /* حجم متوسط */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;    /* النص في الوسط عمودياً */
-  align-items: center;
-  padding: 0 20px;
-  background-image: url('https://i.postimg.cc/4ytMqSsb/pexels-selcuk-teke-393955-3684396.jpg'); /* رابط مباشر */
-  background-size: cover;     /* الصورة تغطي كامل الـ hero */
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  border-radius: 12px;        /* اختيارياً يعطي شكل أنيق */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2); /* اختيارياً */
-}
+      text-align: center;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      background-image: url('https://i.postimg.cc/4ytMqSsb/pexels-selcuk-teke-393955-3684396.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
 
-.hero-destination h1 {
-  font-size: 36px;            
-  margin-bottom: 15px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-}
-
-.hero-destination p {
-  font-size: 18px;
-  max-width: 700px;
-  margin: auto;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-}
-
-
+    .hero-destination h1 {
+      font-size: 36px;            
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
 
     .hero-destination p {
       font-size: 18px;
       max-width: 700px;
       margin: auto;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
+    /* ===== BOUTON CENTRÉ ===== */
+    .hero-cta {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .hero-cta .btn-main {
+      display: inline-block;
+      padding: 16px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #0d6efd;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .hero-cta .btn-main:hover {
+      transform: scale(1.05);
+      background-color: #084298;
     }
 
     .destination-content {
@@ -123,40 +138,86 @@
       text-decoration: none;
       font-weight: bold;
       transition: background-color 0.3s;
+      margin-bottom: 40px;
     }
 
     .whatsapp-btn:hover {
       background-color: #1ebe5d;
     }
 
-    footer {
-      text-align: center;
-      padding: 25px 20px;
-      background-color: #0056b3;
-      color: white;
-      margin-top: 40px;
+    /* ===== FOOTER PRO ===== */
+    .footer-pro {
+      background-color: #0e2439;
+      color: #ffffff;
+      padding-top: 60px;
     }
 
-    footer .social a {
-      color: white;
-      margin: 0 10px;
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding: 0 40px;
+    }
+
+    .footer-col h2, .footer-col h3 {
+      color: #4da6ff;
+      margin-bottom: 15px;
+    }
+
+    .footer-col p, .footer-col ul li {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li a {
+      color: #ffffff;
       text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-col ul li a:hover {
+      color: #4da6ff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background-color: #091a2a;
+      font-size: 14px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero-destination h1 { font-size: 28px; }
+      .hero-destination p { font-size: 16px; }
+      .destination-images img { width: 90%; }
+      .hero-cta .btn-main { font-size: 18px; padding: 14px 30px; }
     }
   </style>
 </head>
 <body>
 
 <nav>
+  <div class="logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt="logo avion">
     <span>AGENCE DIOUANI VOYAGEUR</span>
   </div>
   <div class="menu">
     <a href="index.html">Accueil</a>
     <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  
+    <a href="contact.html" class="active">Contact</a>
   </div>
 </nav>
 
+<!-- ===== HERO ===== -->
 <section class="hero-destination">
   <h1>Voyage en Turquie</h1>
   <p>
@@ -165,6 +226,12 @@
   </p>
 </section>
 
+<!-- ===== BOUTON CENTRÉ ===== -->
+<section class="hero-cta">
+  <a href="https://wa.me/212622569761" class="btn-main">Demandez votre offre maintenant</a>
+</section>
+
+<!-- ===== CONTENU DESTINATION ===== -->
 <section class="destination-content">
   <h2>Description</h2>
   <p>
@@ -173,85 +240,62 @@
     pour vous offrir une expérience unique.
   </p>
 
- <div class="destination-images">
-  <img src="https://i.postimg.cc/LXJs1b7K/istanbul-2912249-1280.jpg" alt="Istanbul Turquie">
-  <img src="https://i.postimg.cc/6qSnZZzP/turkey-4737730-1280.jpg" alt="Cappadocia, Turquie">
-  <img src="https://i.postimg.cc/xT2bw9hG/blacksea-5359212-1280.jpg" alt="Vue Istanbul la nuit">
-</div>
-
-
+  <div class="destination-images">
+    <img src="https://i.postimg.cc/LXJs1b7K/istanbul-2912249-1280.jpg" alt="Istanbul Turquie">
+    <img src="https://i.postimg.cc/6qSnZZzP/turkey-4737730-1280.jpg" alt="Cappadocia, Turquie">
+    <img src="https://i.postimg.cc/xT2bw9hG/blacksea-5359212-1280.jpg" alt="Vue Istanbul la nuit">
+  </div>
 
   <a href="https://wa.me/212622569761" class="whatsapp-btn">
-    Demandez votre offre maintenant
+    📱 Contactez-nous sur WhatsApp
   </a>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer class="footer-pro">
-    <div class="footer-container">
-
-        <div class="footer-col brand">
-            <h2>Agence Diouani Voyage</h2>
-            <p>
-                Votre partenaire de confiance pour les voyages,
-                la Omra et le tourisme international.
-            </p>
-        </div>
-
-        <div class="footer-col">
-            <h3>Horaires d'ouverture</h3>
-            <ul>
-                <li>Lundi - Mardi : 09:00 - 13:00</li>
-                <li>Après-midi : 15:00 - 19:00</li>
-                <li>Samedi : 09:00 - 13:00</li>
-                <li>Dimanche : Fermé</li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h3>Destinations</h3>
-            <ul>
-                <li><a href="#">Turquie</a></li>
-                <li><a href="#">Émirats</a></li>
-                <li><a href="#">Suisse</a></li>
-                <li><a href="#">Arabie Saoudite</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h3>Contact</h3>
-            <ul>
-                <li>📞 06 22 56 97 61</li>
-                <li>📍 Agadir – Maroc</li>
-                <li>✉️ abdellahdiouani10@gmail.com</li>
-            </ul>
-        </div>
-
+  <div class="footer-container">
+    <div class="footer-col brand">
+      <h2>Agence Diouani Voyage</h2>
+      <p>
+        Votre partenaire de confiance pour les voyages,
+        la Omra et le tourisme international.
+      </p>
     </div>
 
-    <div class="footer-bottom">
-        © 2026 Agence Diouani Voyage — Tous droits réservés
+    <div class="footer-col">
+      <h3>Horaires d'ouverture</h3>
+      <ul>
+        <li>Lundi - Mardi : 09:00 - 13:00</li>
+        <li>Après-midi : 15:00 - 19:00</li>
+        <li>Samedi : 09:00 - 13:00</li>
+        <li>Dimanche : Fermé</li>
+      </ul>
     </div>
+
+    <div class="footer-col">
+      <h3>Destinations</h3>
+      <ul>
+        <li><a href="#">Turquie</a></li>
+        <li><a href="#">Émirats</a></li>
+        <li><a href="#">Suisse</a></li>
+        <li><a href="#">Arabie Saoudite</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <ul>
+        <li>📞 06 22 56 97 61</li>
+        <li>📍 Agadir – Maroc</li>
+        <li>✉️ abdellahdiouani10@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Agence Diouani Voyage — Tous droits réservés
+  </div>
 </footer>
-
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
