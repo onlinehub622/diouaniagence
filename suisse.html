@@ -6,21 +6,51 @@
   <title>Voyage en Suisse - AGENCE DIOUANI VOYAGEUR</title>
 
   <style>
-    body{font-family:Arial,sans-serif;margin:0;background:#f8f9fa;color:#333}
+    /* ===== RESET ===== */
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
 
+    body{
+      background:#f8f9fa;
+      color:#333;
+      line-height:1.6;
+    }
+
+    /* ===== NAVBAR ===== */
     nav{
       background:#0056b3;
       color:#fff;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:10px 20px
+      padding:12px 25px;
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
 
-    nav .logo{display:flex;align-items:center}
-    nav .logo img{width:40px;margin-right:10px}
-    nav a{color:#fff;text-decoration:none;margin-left:20px;font-weight:bold}
+    nav .logo{
+      font-size:18px;
+      font-weight:bold;
+    }
 
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin-left:20px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#ffd166;
+    }
+
+    /* ===== HERO DESTINATION ===== */
     .hero-destination{
       height:500px;
       display:flex;
@@ -28,74 +58,146 @@
       justify-content:center;
       align-items:center;
       text-align:center;
-      background-image:url('https://i.postimg.cc/BvmyCB6d/pexels-suissounet-34090360.jpg');
-      background-size:cover;
-      background-position:center;
+      background:
+        linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
+        url('https://i.postimg.cc/BvmyCB6d/pexels-suissounet-34090360.jpg') center/cover no-repeat;
       color:#fff;
-      border-radius:12px;
-      box-shadow:0 6px 20px rgba(0,0,0,.3)
     }
 
     .hero-destination h1{
-      font-size:36px;
+      font-size:40px;
       margin-bottom:15px;
-      text-shadow:2px 2px 6px rgba(0,0,0,.6)
+      text-shadow:2px 2px 6px rgba(0,0,0,.6);
     }
 
     .hero-destination p{
       max-width:700px;
       font-size:18px;
-      text-shadow:1px 1px 4px rgba(0,0,0,.6)
+      text-shadow:1px 1px 4px rgba(0,0,0,.6);
     }
 
+    /* ===== CONTENT ===== */
     .destination-content{
       max-width:1000px;
-      margin:40px auto;
-      padding:0 20px
+      margin:50px auto;
+      padding:0 20px;
     }
 
-    .destination-content h2{color:#0056b3}
+    .destination-content h2{
+      color:#0056b3;
+      margin-bottom:10px;
+    }
 
     .destination-images{
       display:flex;
       gap:20px;
       flex-wrap:wrap;
       justify-content:center;
-      margin-bottom:30px
+      margin:30px 0;
     }
 
     .destination-images img{
       width:300px;
-      border-radius:12px;
-      box-shadow:0 6px 20px rgba(0,0,0,.1)
+      border-radius:14px;
+      box-shadow:0 6px 20px rgba(0,0,0,.15);
+      transition:0.3s;
     }
 
+    .destination-images img:hover{
+      transform:scale(1.05);
+    }
+
+    /* ===== WHATSAPP BUTTON ===== */
     .whatsapp-btn{
       display:inline-block;
       background:#25d366;
       color:#fff;
-      padding:12px 20px;
-      border-radius:8px;
+      padding:14px 25px;
+      border-radius:10px;
       text-decoration:none;
-      font-weight:bold
+      font-weight:bold;
+      transition:0.3s;
     }
 
-    footer{
-      background:#0056b3;
+    .whatsapp-btn:hover{
+      background:#1ebe5d;
+      transform:scale(1.05);
+    }
+
+    /* ===== FOOTER PRO ===== */
+    .footer-pro{
+      background:#0b1c2d;
       color:#fff;
+      padding:60px 20px 20px;
+      margin-top:60px;
+    }
+
+    .footer-container{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+    }
+
+    .footer-col h2,
+    .footer-col h3{
+      color:#0d6efd;
+      margin-bottom:15px;
+    }
+
+    .footer-col p,
+    .footer-col li{
+      font-size:14px;
+      line-height:1.8;
+      list-style:none;
+    }
+
+    .footer-col ul{
+      padding:0;
+    }
+
+    .footer-col a{
+      color:#fff;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .footer-col a:hover{
+      color:#0d6efd;
+    }
+
+    .footer-bottom{
       text-align:center;
-      padding:25px;
-      margin-top:40px
+      margin-top:40px;
+      padding:20px;
+      font-size:14px;
+      background:rgba(0,0,0,.3);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:768px){
+      nav{
+        flex-direction:column;
+        gap:10px;
+      }
+
+      .hero-destination h1{
+        font-size:30px;
+      }
+
+      .hero-destination p{
+        font-size:16px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-  <div class="logo">
-    <span>AGENCE DIOUANI VOYAGEUR</span>
-  </div>
+  <div class="logo">AGENCE DIOUANI VOYAGEUR</div>
   <div>
     <a href="index.html">Accueil</a>
     <a href="services.html">Services</a>
@@ -103,6 +205,7 @@
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero-destination">
   <h1>Voyage en Suisse</h1>
   <p>
@@ -110,6 +213,7 @@
   </p>
 </section>
 
+<!-- CONTENT -->
 <section class="destination-content">
   <h2>Description</h2>
   <p>
@@ -129,58 +233,52 @@
   </a>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer-pro">
-    <div class="footer-container">
+  <div class="footer-container">
 
-        <div class="footer-col brand">
-            <h2>Agence Diouani Voyage</h2>
-            <p>
-                Votre partenaire de confiance pour les voyages,
-                la Omra et le tourisme international.
-            </p>
-        </div>
-
-        <div class="footer-col">
-            <h3>Horaires d'ouverture</h3>
-            <ul>
-                <li>Lundi - Mardi : 09:00 - 13:00</li>
-                <li>Après-midi : 15:00 - 19:00</li>
-                <li>Samedi : 09:00 - 13:00</li>
-                <li>Dimanche : Fermé</li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h3>Destinations</h3>
-            <ul>
-                <li><a href="#">Turquie</a></li>
-                <li><a href="#">Émirats</a></li>
-                <li><a href="#">Suisse</a></li>
-                <li><a href="#">Arabie Saoudite</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h3>Contact</h3>
-            <ul>
-                <li>📞 06 XX XX XX XX</li>
-                <li>📍 Agadir – Maroc</li>
-                <li>✉️ contact@diouanivoyage.com</li>
-            </ul>
-        </div>
-
+    <div class="footer-col">
+      <h2>Agence Diouani Voyage</h2>
+      <p>
+        Votre partenaire de confiance pour les voyages,
+        la Omra et le tourisme international.
+      </p>
     </div>
 
-    <div class="footer-bottom">
-        © 2026 Agence Diouani Voyage — Tous droits réservés
+    <div class="footer-col">
+      <h3>Horaires</h3>
+      <ul>
+        <li>Lundi - Vendredi : 09:00 - 19:00</li>
+        <li>Samedi : 09:00 - 13:00</li>
+        <li>Dimanche : Fermé</li>
+      </ul>
     </div>
+
+    <div class="footer-col">
+      <h3>Destinations</h3>
+      <ul>
+        <li><a href="#">Turquie</a></li>
+        <li><a href="#">Émirats</a></li>
+        <li><a href="#">Suisse</a></li>
+        <li><a href="#">Arabie Saoudite</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <ul>
+        <li>📞 06 XX XX XX XX</li>
+        <li>📍 Agadir – Maroc</li>
+        <li>✉️ contact@diouanivoyage.com</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Agence Diouani Voyage — Tous droits réservés
+  </div>
 </footer>
 
 </body>
 </html>
-
-
-
-
-
-
