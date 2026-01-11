@@ -210,26 +210,69 @@ nav {
   background: #1ebe5d;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  background: var(--dark);
-  color: var(--white);
-  text-align: center;
-  padding: 25px;
-  margin-top: 60px;
-  font-size: 14px;
+/* ===== FOOTER PRO ===== */
+.footer-pro {
+    background-color: #0e2439;
+    color: #ffffff;
+    padding-top: 60px;
 }
 
-footer .social a {
-  color: var(--white);
-  text-decoration: none;
-  margin: 0 10px;
-  transition: 0.3s;
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 أعمدة ثابتة */
+    gap: 40px;
+    padding: 0 40px;
 }
 
-footer .social a:hover {
-  color: var(--secondary);
+.footer-col h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #4da6ff;
 }
+
+.footer-col h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #4da6ff;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #4da6ff;
+}
+
+/* Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #091a2a;
+    font-size: 14px;
+}
+
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
@@ -262,3 +305,4 @@ footer .social a:hover {
   .hero-content p  { font-size: 16px; }
   .hero-content h2 { font-size: 20px; }
 }
+
