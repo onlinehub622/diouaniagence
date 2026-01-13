@@ -1,281 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voyage en Arabie Saoudite - AGENCE DIOUANI VOYAGEUR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    /* ===== RESET ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-    }
+<title>Agence Diouani Voyage – Voyage Arabie Saoudite</title>
 
-    /* ===== COLORS ===== */
-    :root {
-      --primary: #0d3b99;
-      --secondary: #0d6efd;
-      --dark: #0b1c2d;
-      --white: #ffffff;
-      --text-dark: #333;
-      --button: #0d6efd;
-      --button-hover: #084298;
-    }
+<style>
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
 
-    body {
-      background-color: var(--white);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
+/* ===== COLORS ===== */
+:root{
+  --primary:#0d3b99;
+  --secondary:#0d6efd;
+  --white:#ffffff;
+}
 
-    /* ===== NAVBAR ===== */
-    .navbar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: transparent;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      z-index: 10;
-    }
+/* ===== BODY ===== */
+body{
+  background:#fff;
+  color:#333;
+}
 
-    .navbar .logo {
-      font-size: 26px;
-      font-weight: bold;
-      color: var(--white);
-    }
+/* ===== NAVBAR ===== */
+.navbar{
+  position:absolute;
+  top:0;
+  width:100%;
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:10;
+}
 
-    .navbar nav {
-      display: flex;
-      gap: 30px;
-    }
+.navbar .logo{
+  color:white;
+  font-size:22px;
+  font-weight:bold;
+}
 
-    .navbar nav a {
-      color: var(--white);
-      text-decoration: none;
-      padding: 10px 20px;
-      font-size: 18px;
-      font-weight: 600;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
+.navbar nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:600;
+}
 
-    .navbar nav a:hover {
-      background-color: var(--secondary);
-    }
+.navbar nav a:hover{
+  text-decoration:underline;
+}
 
-    /* ===== HERO ===== */
-    .hero {
-      min-height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('https://i.postimg.cc/9F4BySQM/Gemini-Generated-Image-u7cra0u7cra0u7cr.png')
-        center / cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-      padding: 100px 20px 40px;
-    }
+/* ===== HERO SECTION ===== */
+.hero{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url("IMAGE-URL-HERE")
+    center center / cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
 
-    .hero-content h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
+/* ===== HERO CONTENT ===== */
+.hero-content{
+  color:white;
+  max-width:700px;
+}
 
-    .hero-content p {
-      font-size: 22px;
-      max-width: 900px;
-      margin: auto;
-    }
+.hero-content h1{
+  font-size:48px;
+  margin-bottom:15px;
+}
 
-    /* ===== BUTTON ===== */
-    .btn-main {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 35px;
-      background-color: var(--button);
-      color: var(--white);
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+.hero-content p{
+  font-size:22px;
+  margin-bottom:25px;
+}
 
-    .btn-main:hover {
-      background-color: var(--button-hover);
-    }
+.btn-main{
+  display:inline-block;
+  padding:14px 35px;
+  background:var(--secondary);
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
 
-    /* ===== DESTINATION ===== */
-    .destination-content {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
+.btn-main:hover{
+  background:var(--primary);
+}
 
-    .destination-content h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: var(--primary);
-    }
+/* ===== MOBILE FIX ===== */
+@media (max-width:768px){
+  .hero{
+    background-size:contain;
+    background-position:center top;
+  }
 
-    .destination-content p {
-      font-size: 18px;
-      margin-bottom: 40px;
-    }
+  .hero-content h1{
+    font-size:30px;
+  }
 
-    .destination-images {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
+  .hero-content p{
+    font-size:18px;
+  }
 
-    .destination-images img {
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      transition: 0.3s;
-    }
-
-    .destination-images img:hover {
-      transform: scale(1.05);
-    }
-
-    /* ===== FOOTER ===== */
-    .footer-pro {
-      background-color: var(--dark);
-      color: var(--white);
-      padding: 60px 20px 20px;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 40px;
-    }
-
-    .footer-col h2,
-    .footer-col h3 {
-      color: var(--secondary);
-      margin-bottom: 15px;
-    }
-
-    .footer-col ul {
-      list-style: none;
-    }
-
-    .footer-col ul li {
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      background: rgba(0,0,0,0.3);
-      font-size: 14px;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .hero-content h1 {
-        font-size: 32px;
-      }
-
-      .hero-content p {
-        font-size: 18px;
-      }
-    }
-  </style>
+  .navbar{
+    flex-direction:column;
+    gap:10px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header class="navbar">
-    <div class="logo">AGENCE DIOUANI VOYAGEUR</div>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<header class="navbar">
+  <div class="logo">AGENCE DIOUANI VOYAGE</div>
+  <nav>
+    <a href="#">Accueil</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Voyage en Arabie Saoudite</h1>
-      <p>
-        Découvrez la magie de l'Arabie Saoudite avec nos voyages touristiques
-        bien organisés et des expériences inoubliables.
-      </p>
-      <a href="https://wa.me/212622569761" class="btn-main">
-        Demandez votre offre
-      </a>
-    </div>
-  </section>
-
-  <section class="destination-content">
-    <h2>Description</h2>
-    <p>
-      L'Arabie Saoudite est une destination fascinante avec ses villes
-      historiques, ses paysages naturels et sa culture riche.
-    </p>
-
-    <div class="destination-images">
-      <img src="https://i.postimg.cc/28gV6hVS/saudi-1.jpg" alt="Arabie Saoudite">
-      <img src="https://i.postimg.cc/2y5L2Qy1/saudi-2.jpg" alt="Arabie Saoudite">
-      <img src="https://i.postimg.cc/0QxXq0bn/saudi-3.jpg" alt="Arabie Saoudite">
-    </div>
-  </section>
-
-  <footer class="footer-pro">
-    <div class="footer-container">
-      <div class="footer-col">
-        <h2>Agence Diouani Voyage</h2>
-        <p>Votre partenaire de confiance pour les voyages et la Omra.</p>
-      </div>
-
-      <div class="footer-col">
-        <h3>Horaires</h3>
-        <ul>
-          <li>Lun–Ven : 09:00 – 19:00</li>
-          <li>Samedi : 09:00 – 13:00</li>
-          <li>Dimanche : Fermé</li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Contact</h3>
-        <ul>
-          <li>📞 06 22 56 97 61</li>
-          <li>📍 Agadir – Maroc</li>
-          <li>✉️ abdellahdiouani10@gmail.com</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      © 2026 Agence Diouani Voyage — Tous droits réservés
-    </div>
-  </footer>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Voyage en Arabie Saoudite</h1>
+    <p>Découvrez une expérience unique avec l’Agence Diouani Voyage.</p>
+    <a href="https://wa.me/212622569761" class="btn-main">
+      Demander une offre
+    </a>
+  </div>
+</section>
 
 </body>
 </html>
