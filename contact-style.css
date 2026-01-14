@@ -16,31 +16,34 @@
   --highlight: #ffd700;     /* hover active */
 }
 
-/* ===== NAVBAR بدون cadre ===== */
+/* ===== NAVBAR ===== */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background: var(--primary); /* أزرق صافٍ */
-  border: none;              /* نحينا أي border */
-  border-radius: 0;          /* نحينا أي radius */
-  box-shadow: none;          /* نحينا أي shadow */
+  background-color: var(--dark);
+  padding: 15px 50px;
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 6px;
   transition: 0.3s;
 }
 
-.navbar .logo,
-.navbar .menu a {
-  color: #ffffff;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.navbar .menu a:hover,
-.navbar .menu a.active {
-  color: var(--highlight); /* لون hover */
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: var(--secondary);
+  background: rgba(255,255,255,0.1);
 }
 
 
@@ -257,3 +260,4 @@
   .contact-hero h1 {
     font-size: 28px;
   }
+
