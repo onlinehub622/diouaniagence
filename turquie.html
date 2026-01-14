@@ -14,35 +14,35 @@
       color: #333;
     }
 
-    nav {
-      background-color: #0056b3;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
+   /* ===== NAVBAR ===== */
+.navbar {
+  background-color: var(--dark);
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    nav .logo {
-      display: flex;
-      align-items: center;
-    }
+.navbar nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
 
-    nav .logo img {
-      width: 40px;
-      margin-right: 10px;
-    }
+.navbar nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
 
-    nav .menu a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-
-    nav .menu a.active {
-      text-decoration: underline;
-    }
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: var(--secondary);
+  background: rgba(255,255,255,0.1);
+}
 
     .hero-destination {
   text-align: center;
@@ -234,6 +234,7 @@
 
 </body>
 </html>
+
 
 
 
