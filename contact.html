@@ -35,16 +35,22 @@
   <div class="simple-form">
     <h2>Demande de Réservation</h2>
 
-
-    <form action="https://formspree.io/f/xbdlpqwq" method="POST">
+     <form action="https://formspree.io/f/xbdlpqwq" method="POST">
       <input type="text" name="nom" placeholder="Nom" required>
       <input type="text" name="prenom" placeholder="Prénom" required>
       <input type="email" name="email" placeholder="Email" required>
       <input type="tel" name="telephone" placeholder="Téléphone" required>
-      <textarea name="message" placeholder="Votre message..." required></textarea>
+      <select name="service" required>
+                <option value="">Choisir un service</option>
+                <option>Organisation de Voyages Complets</option>
+                <option>Réservation de Billets d'Avion</option>
+                <option>Réservation d'Hôtels</option>
+                <option>Programmes Touristiques Préparés</option>
+                <option>Voyages Spéciaux</option>
+            </select>
       <button type="submit">Envoyer</button>
     </form>
-
+    
     <a href="https://wa.me/212622569761" class="whatsapp-btn">
       📱 WhatsApp Direct
     </a>
@@ -176,6 +182,7 @@ document.querySelectorAll(".accordion-btn").forEach(btn => {
 
 </body>
 </html>
+
 
 
 
